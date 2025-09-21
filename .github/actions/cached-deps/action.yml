@@ -17,6 +17,5 @@ runs:
             key: deps-node-modules-${{hashFiles('**/package-lock.json')}}
         - name: Install dependecies
           if: steps.cache.outputs.cachce-hit != 'true' || inputs.caching != 'true'
-          run: npm ci
-          run: echo teps.cache.outputs.cachce-hit
+          run: npm ci | echo teps.cache.outputs.cachce-hit
           shell: bash
