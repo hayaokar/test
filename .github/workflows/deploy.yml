@@ -63,7 +63,7 @@ jobs:
       - name: Output contents
         run: ls
       - name: Output contents
-        run: echo ${secrets.AWS_ACCESS_KEY_ID}
+        run: echo "${{secrets.AWS_ACCESS_KEY_ID}}"
       - name: Deploy site
         uses: ./.github/actions/deploy-s3-javascript
         env:
