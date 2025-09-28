@@ -71,7 +71,7 @@ jobs:
       - name: Output contents
         run: ls
       - name: Deploy site
-        uses: ./.github/actions/deploy-s3-docker
+        uses: ./.github/actions/deploy-s3-javascript
         with:
           bucket: gha-custom-action-hosting-haya
           dist-folder: ./dist
